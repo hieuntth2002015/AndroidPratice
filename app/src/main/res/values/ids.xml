@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view_back_to_add" type="id" />
+    <item name="recycler_view_list_product" type="id" />
+</resources>

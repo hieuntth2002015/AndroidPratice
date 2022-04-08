@@ -1,62 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/et_username"
-        android:layout_width="wrap_content"
+    tools:context=".FirstFragment"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/insert"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/My_color"
+        android:text="ADD PRODUCT FORM"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Username"/>
+        android:padding="20dp">
 
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name:"
+            android:paddingTop="20dp"
+            android:textSize="20dp"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_toRightOf="@id/nameLabel"
+            android:paddingTop="20dp"
+            />
+    </RelativeLayout>
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:ems="10"
-        android:layout_below="@+id/et_username"
-        android:inputType="textPassword"
-        android:hint="Password"/>
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/et_cpassword"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/quantityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:paddingTop="20dp"
+            android:textSize="20dp"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/productQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_toRightOf="@id/quantityLabel"
+            android:paddingTop="20dp"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:ems="10"
-        android:layout_below="@+id/et_password"
-        android:inputType="textPassword"
-        android:hint="Confirm Password"/>
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:ems="10"
-        android:text="Register"
-        android:layout_below="@+id/et_cpassword" />
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingTop="20dp"
+            android:text="Add product"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/My_color"/>
+        <Button
+            android:id="@+id/btnList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@+id/btnAddProduct"
+            android:text="List Product"
+            android:textColor="@color/black"
+            android:paddingTop="20dp"
+            android:backgroundTint="@color/My_color"
+            />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:text="Login"
-        android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
+</LinearLayout>
